@@ -1,17 +1,34 @@
 <div class="header">
     <nav class="nav-menu">
         <a class="nav-logo" href="home.php">
-            House Of Clay
+            House Of Calypso
         </a>
         <ul class="nav-list">
-            <li class="shop-link"><a  href="shop.php">Shop</a></li>
+            <li><a  href="shop.php">Shop</a></li>
             <li><a href="#">Philosophy</a></li>
             <li><a href="#">Contact</a></li>
+            <?php 
+                if(!isset($_SESSION['user_id'])) {
+            ?>
             <li>
-                <a class="user-login-button" >
-                    <i class="fas fa-sign-in-alt"></i>
+                <a class="user-login-button"  href="#" data-toggle="modal" data-target="#login-modal">
+                    <i class='bx bx-user'></i>
                 </a>
             </li>
+            <?php
+                } else {
+            ?>
+                <li>                    
+                    <span class="welcome-user">
+                        Hi, <?= $_SESSION["full_name"] ?>
+                    </span>
+                    <a class="user-logout-button"  href="logout.php">
+                        <i class='bx bx-log-out-circle'></i>
+                    </a>
+                </li> 
+            <?php
+                }
+            ?>
         </ul>
     </nav>
 </div>

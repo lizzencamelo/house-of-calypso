@@ -8,13 +8,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>House Of Clay</title>
+    <title>House Of Calypso</title>
 
     <?php
         include "include/all_links.php";
     ?>
-
-    <link href="css/home.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet" />
 </head>
 <body>
     <?php
@@ -23,44 +22,19 @@
     
     <div class="landing-container">
         <div class="landing-text">
-            <h1>House Of Clay</h1>
+            <h1>House Of Calypso</h1>
             <span class="sub-heading">
                 We offer handcrafted, fine quality and material-first objects, 
                 and we’re proud in our effort to lead the way in offering 
                 small-scale sustainably produced goods that at its core celebrate tradition.
             </span>
         </div>
-    </div>
-
-    <div class="new-in-container">
-        <div class="new-in-title">
-            <h2>New in selection<br/>of BOWLS</h2>
-        </div>
-        <div class="new-in-carousel-container">
-            <div class="new-in-carousel-title">
-                <h2>Shop all<br/>products</h2>
-            </div>
-            <div class="new-in-carousel">
-                
-                <!---->
-                <ul class="list">
-                    <li class="hide"></li>
-                    <li class="prev"></li>
-                    <li class="act"></li>
-                    <li class="next"></li>
-                    <li class="next new-next"></li>
-                </ul>
-
-                <div class="swipe"></div>
-
-                <script src="https://hammerjs.github.io/dist/hammer.js"></script>
-                <!---->
-
-            </div>
+        <div id="scroll" class="scroll-animate">
+            <a href="#mugs-category-container"><span></span></a>
         </div>
     </div>
 
-    <div class="category-container">
+    <div class="category-container" id="mugs-category-container">
         <div class="category-image category-mugs">
         </div>
         <div class="category-details">
@@ -71,7 +45,7 @@
                 Dig into our universe of different kinds of handmade ceramic mugs and 
                 explore what a cup can do for your experience of your favorite drink.
             </p>
-            <a class="animated-arrow" href="">
+            <a class="animated-arrow" href="shop.php?category=Mugs">
                 <span class="the-arrow -left">
                     <span class="shaft"></span>
                 </span>
@@ -84,10 +58,10 @@
                     </span>
                 </span>
             </a>
-        </div>
+        </div>   
     </div>
 
-    <div class="category-container">
+    <div class="category-container"  id="plates-category-container">
         <div class="category-details">
             <h3>Plates and Platters</h3>
             <p class="category-desc">
@@ -98,7 +72,7 @@
                 color-direction for your dinnerware. Then the final look
                 will feel complete, yet still personal and unique
             </p>
-            <a class="animated-arrow" href="">
+            <a class="animated-arrow" href="shop.php?category=Plates">
                 <span class="the-arrow -left">
                     <span class="shaft"></span>
                 </span>
@@ -116,7 +90,7 @@
         </div>
     </div>
 
-    <div class="category-container">
+    <div class="category-container"  id="bowls-category-container">
         <div class="category-image category-bowl">
         </div>
         <div class="category-details">
@@ -127,7 +101,7 @@
                 Our collection consists of handmade and unique bowls made for 
                 every occasion.
             </p>
-            <a class="animated-arrow" href="">
+            <a class="animated-arrow" href="shop.php?category=Bowls">
                 <span class="the-arrow -left">
                     <span class="shaft"></span>
                 </span>
@@ -143,7 +117,7 @@
         </div>
     </div>
 
-    <div class="category-container">
+    <div class="category-container"  id="pitcher-category-container">
         <div class="category-details">
             <h3>Pitchers and Jugs</h3>
             <p class="category-desc">
@@ -155,7 +129,7 @@
                 with our cups and teapots for the perfect afternoon tea decor,
                  wine serving or fresh water with your dinner.
             </p>
-            <a class="animated-arrow" href="">
+            <a class="animated-arrow" href="shop.php?category=Jugs">
                 <span class="the-arrow -left">
                     <span class="shaft"></span>
                 </span>
@@ -177,6 +151,7 @@
         include "include/login_modal.php";
         include "include/footer.php";
     ?>
+    
     <script src="js/home.js" type="text/javascript"></script>
 
 </body>

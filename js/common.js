@@ -1,39 +1,65 @@
-const loginModal = document.querySelector(".login-modal");
-const signUpModal = document.querySelector(".signup-modal");
-const loginButtons = document.querySelectorAll(".user-login-button");
-const signUpButton = document.querySelector(".user-signup-button");
-const closeButtons = document.querySelectorAll(".modal-close-button");
+window.addEventListener("load", function () {
+    var signup_form = document.getElementById("signup-form");
+    signup_form.addEventListener("submit", function (event) {
+        console.log('signup');
+        var XHR = new XMLHttpRequest();
+        var form_data = new FormData(signup_form);
 
-const openLoginModal = () => {
-    signUpModal.style.display = "none";
-    loginModal.style.display = "block";
-};
+        // On success
+        XHR.addEventListener("load", signup_success);
 
-const openSignUpModal = () => {
-    loginModal.style.display = "none";
-    signUpModal.style.display = "block";
-}
+        // On error
+        XHR.addEventListener("error", on_error);
 
-const closeModal = () => {
-    loginModal.style.display = "none";
-    signUpModal.style.display = "none";
-};
+        // Set up request
+        XHR.open("POST", "api/signup_submit.php");
 
-loginButtons.forEach(element => {
-    element.addEventListener("click", openLoginModal);
-});
-signUpButton.addEventListener("click", openSignUpModal);
-closeButtons.forEach(element => {
-    element.addEventListener("click", closeModal);
-});
+        // Form data is sent with request
+        XHR.send(form_data);
 
-document.addEventListener("keydown", event => {
-    event.key === "Escape" ? closeModal() : false;
-})
+        event.preventDefault();
+    });
 
-window.addEventListener("load", function() {
     var login_form = document.getElementById("login-form");
     login_form.addEventListener("submit", function (event) {
+        var XHR = new XMLHttpRequest();
+        var form_data = new FormData(login_form);
 
+        // On success
+        XHR.addEventListener("load", login_success);
+
+        // On error
+        XHR.addEventListener("error", on_error);
+
+        // Set up request
+        XHR.open("POST", "api/login_submit.php");
+
+        // Form data is sent with request
+        XHR.send(form_data);
+
+        event.preventDefault();
     });
-})
+});
+
+var signup_success = function (event) {
+    var response = JSON.parse(event.target.responseText);
+    if (response.success) {
+        alert(response.message);
+        window.location.href = "home.php";
+    } else {
+        alert(response.message);
+    }
+};
+
+var login_success = function (event) {
+    var response = JSON.parse(event.target.responseText);
+    if (response.success) {
+        location.reload();
+    } else {
+        alert(response.message);
+    }
+};
+
+var on_error = function (event) {
+    alert('Oops! Something went wrong.');
+};

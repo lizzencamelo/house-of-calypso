@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans+Mono&family=Varela&family=Zilla+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Bungee+Hairline&family=Srisakdi&family=Zilla+Slab:wght@300&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,7 +7,12 @@
     padding: 0;
     font-size: 16px;
     font-family: 'Varela', sans-serif;
+    text-decoration: none;
 }
+
+html {    
+    scroll-behavior: smooth;
+  }
 
 ::selection {
     background-color: #000000;
@@ -23,23 +29,94 @@
     --text-link: rgb(95, 90, 90);
 }
 
-/* Login and Sign-up Modal */
-.modal {
-    display: none;
-    transform: scale(1);
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
+
+/* Header */
+.header {
+    position: absolute;
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.3);
-    overflow: auto;
+    padding: 2rem;
 }
 
-.modal-container {
-    height: 100%;
-    width: 100%;;
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style-type: none;
+    text-align: left;
+}
+
+nav a,
+nav ul li a {
+    text-decoration: none;
+    text-transform: lowercase;
+    color: var(--text-header);
+    transition:ease 250ms;
+}
+
+nav ul li a:hover, 
+nav .user-login-button:hover i, 
+nav .user-logout-button:hover i,
+.shop-cart-button:hover i {
+    color:var(--text-header-alt);
+}
+
+nav .user-login-button i,
+nav .user-logout-button i {
+    cursor: pointer;
+    color: var(--text-header);
+}
+
+nav .welcome-user {
+    color: var(--text-header);
+    font-weight: bold;
+}
+
+@media (min-width: 992px) {
+    nav ul {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    nav ul li a {        
+        padding:0 2rem;
+    }
+    nav ul li .user-login-button,
+    nav ul li .user-logout-button,
+    .shop-cart-button {
+        padding-left: 2rem;
+    }
+}
+
+.shop-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0px 40px;
+  background-color: rgb(246,246,246);
+  height: 50px;
+}
+
+.shop-header a {
+    display: block;
+    color: #000000;
+}
+
+.shop-cart-button i {
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: black;
+}
+
+/* Login and Sign-up Modal */
+.modal-body {
+    padding: 0;   
+    overflow: hidden;
+}
+
+.modal .row {
+    background-color: var(--color-bg-2);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,21 +124,15 @@
 }
 
 .modal-right {    
-    background-color: var(--color-bg-2);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem 1rem;
-    width: 100%;
 }
 
 .modal-title {
+    color: var(--text-normal);
     font-size: 2rem;
-}
-
-.signup-modal .modal-title {
-    margin-top: 1rem;
 }
 
 .modal-desc {
@@ -75,6 +146,10 @@
     font-size: 0.65rem;
 }
 
+#signup-modal .modal-message {
+    padding-bottom: 2rem;
+}
+
 .modal-message a {
     cursor: pointer;
     color: var(--text-normal);
@@ -86,17 +161,19 @@
     color: var(--text-link);
 }
 
-.login-modal .input-block {
+#login-modal .input-block {
     margin: 1rem 0;
 }
 
-.signup-modal .input-block {
-    margin: 0.5rem 0;
+#signup-modal .input-block {
+    margin: 0.2rem 0;
 }
 
 .input-label {
-    font-size: 0.6rem;
-    letter-spacing: 1.1rem;
+    width: 100%;
+    color: var(--text-normal);
+    font-size: 0.5rem;
+    letter-spacing: 0.5rem;
     text-transform: uppercase;
 }
 
@@ -109,8 +186,7 @@
     transition: ease .4s;
 }
 
-.signup-modal input {
-    padding: 0.2rem 0.1rem;
+#signup-modal input {
     margin: 0;
 }
 
@@ -144,60 +220,55 @@
     background-color: var(--text-header-alt);
 }
 
-.modal-left {    
-    background-color: var(--color-bg-2);
-    width: 100%;
-    height: 50%;
-}
-
-.modal-left img {
-    transform: scale(1);
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-}
-
 .modal-close-button {
-    padding: 5px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 2rem;
+    right: 2rem;
+    display: inline-block;
+    text-align: right;
+}
+
+.modal-left {    
+    position: relative;
+    background-image: url('../img/mod1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.modal-close-button i {
+    cursor: pointer;
+}
+
+.modal-close-button i {
+    font-size: 1.4rem;
+    color: #000000;
     transition: ease 0.2s;
 }
 
-.modal-close-button:hover {
-    transform: scale(1.8);
+.modal-close-button i:hover {
+    transform: scale(1.4);
 }
 
-@media (min-width: 768px) {
-    .modal-container {
+@media (min-width: 992px) {
+    .modal .row {
         flex-direction: row;
     }
-  
     .modal-right, .modal-left {
         width: 40vw;
         height: 80vh;
     }
-
-    .modal-left, .modal-left img {
-        border-bottom-right-radius: 15px;
-        border-top-right-radius: 15px;
-    }
-    
     .modal-left {        
-        position: relative;
         order: 2;
     }
-
     .modal-right {
         order: 1;
-        border-bottom-left-radius: 15px;
-        border-top-left-radius: 15px;
     }  
-}
+    .input-label {
+        font-size: 0.6rem;
+        letter-spacing: 1.1rem;
+    }
+}   
 
 /* Footer */
 .footer-container {

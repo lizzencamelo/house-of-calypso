@@ -1,11 +1,18 @@
 body {
+    background-color: rgb(246,246,246);
+    font-size: 12px;
+    font-family: "Work Sans";
+  }
+
+  .shop-header {
+    justify-content: space-between;
+  }
+
+  .product-page-container {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(246,246,246);
-    font-size: 12px;
-    font-family: "Work Sans";
   }
 
   .container {

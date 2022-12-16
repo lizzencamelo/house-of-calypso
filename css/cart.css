@@ -1,0 +1,70 @@
+body {
+    background-color: rgb(246,246,246);
+    font-size: 12px;
+    font-family: "Work Sans";
+    overflow-x: hidden;
+  }
+  
+  .your-cart,
+  .checkout-box {
+    padding: 4rem 1rem;
+  }
+
+  .cart-menu, 
+  .order-summary {
+    border-bottom: 1px solid black;
+  }
+
+  .your-cart .row {
+    margin: 2rem 4rem;
+  }
+
+  .item-del-button i {
+    cursor: pointer;
+  }
+
+  .item-del-button i {
+    font-size: 1.4rem;
+    color: #000000;
+    transition: ease 0.2s;
+  }
+
+  .item-del-button i:hover {
+    transform: scale(1.4);
+  }
+
+  .image-container {
+    height: 200px;
+  }
+  
+  .image-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .checkout-box {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    right: 0;
+    margin: 7.5rem 1rem;
+    height: 100vh;
+  }
+  .checkout-box .order-desc {
+    margin-top: 4rem;
+  }
+
+  .checkout-btn {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    padding: 0.5rem 2rem;
+  }
+
+  .checkout-btn:hover {
+    color: black;
+    background-color: white;
+  }
+  

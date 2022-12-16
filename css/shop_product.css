@@ -29,8 +29,35 @@ body {
     }
   }
 
+  .product-material, .product-colour, .tag {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+  .quantity {
+    background-color: transparent;
+    outline:none;
+    border: none;
+    width: 100px;
+  }
+  
+  .product-title , .product-price, .product-dimensions {
+    font-family: 'Mulish', sans-serif;
+  }
+
+  .product-details {
+font-family: 'Cormorant Garamond', serif;
+    
+  }
+
   .product-description {
+    padding: 2rem;
     margin: 2rem;
+  }
+
+  .product-image {
+    height: 450px;
   }
 
   .product-image img {
@@ -39,16 +66,27 @@ body {
     object-fit: cover;
   }
 
+  .add-to-cart {
+    width: 100%;
+    padding: 2rem 0;
+  }
+
   .add-to-cart-btn {
+    text-transform: uppercase;
+    font-family: 'Martian Mono', monospace;
     text-decoration: none;
     color: white;
     background-color: black;
     border: 1px solid black;
-    padding: 0.5rem 2rem;
+    font-size: 0.7rem;
+    padding: 0.5rem 1.6rem;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
   }
 
   .add-to-cart-btn:hover {
     color: black;
     background-color: white;
   }
+  
   

@@ -45,6 +45,12 @@
     <link href="css/cart.css" rel="stylesheet">
 </head>
 <body>
+
+
+    <div class="shop-header">
+        <a href="home.php">house of calypso</a>
+        <span><a href="shop.php?category=Mugs">shop</a></span>
+    </div>
     
     <div class="row">
         <div class="col-md-8 your-cart">
@@ -69,10 +75,10 @@
                 <div class="col-3 image-container">
                     <img src="<?= $product_images[0] ?>" alt="" />
                 </div>
-                <div class="col-4"><h2><?= $cart_product['name'] ?></h2></div>
-                <div class="col-2"><?= $cart_product['quantity'] ?></div>
-                <div class="col-2">&#x20B9;  <?= $cart_product['price']*$cart_product['quantity']; ?></div>
-                <div class="col-1"><a class="item-del-button" href="api/cart_submit.php?delete=<?= $cart_product['product_id'] ?>&quantity=<?= $cart_product['quantity'] ?>"><i class="bx bx-x"></i></a></div>
+                <div class="col-4 "><h2><?= $cart_product['name'] ?></h2></div>
+                <div class="col-2 "><?= $cart_product['quantity'] ?></div>
+                <div class="col-2 ">&#x20B9;  <?= $cart_product['price']*$cart_product['quantity']; ?></div>
+                <div class="col-1 "><a class="item-del-button" href="api/cart_submit.php?delete=<?= $cart_product['product_id'] ?>&quantity=<?= $cart_product['quantity'] ?>"><i class="bx bx-x"></i></a></div>
             </div> 
             <?php 
                 }

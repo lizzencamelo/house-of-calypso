@@ -45,7 +45,7 @@
             echo "Something went wrong!";
             return;
         } 
-        header("location: ../shop_product.php?product_id=$product_id");
+        header("location: ../cart.php");
     }
 
 

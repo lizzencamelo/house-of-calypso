@@ -51,28 +51,34 @@
             <div class="product-description">
                 <div class="product-material"><?= $product['material'] ?></div>
                 <h1 class="product-title"><?= $product['name'] ?></h1>
-                <div class="product-details"><?= $product['description'] ?></div>
-                <div class="product-colour"><?= $product['colour'] ?></div>
-                <div class="product-dimensions"><?= $product['measurements'] ?></div>
-                <div class="product-price">&#x20B9; <?= number_format($product['price']); ?></div>
-                <form action="api/cart_submit.php" method="post">
-                    <input type="number" name="quantity" value="1" min="1" max="<?=$product['stock']?>" required>
-                    <input type="hidden" name="product_id" value="<?=$product['product_id']?>">
-                    <div class="add-to-cart">
+                <div class="product-details py-3"><?= $product['description'] ?></div>
+                <div class="product-colour py-3"><?= $product['colour'] ?></div>
+                <div class="product-dimensions pb-5"><?= $product['measurements'] ?></div>
+                <div class="row">
+                    <div class="product-price col-6 d-flex flex-column"><span class="tag">Price</span> &#x20B9; <?= number_format($product['price']); ?></div>
+                    <form action="api/cart_submit.php" method="post">
+                        <div class="col-6  d-flex flex-column">
+                            <span class="tag">Quantity</span>
+                            <input type="number" class="quantity" name="quantity" value="1" min="1" max="<?=$product['stock']?>" required>
+                        </div>
+                </div>
+
+                        <input type="hidden" name="product_id" value="<?=$product['product_id']?>">
+                        <div class="add-to-cart">
                         <?php
                             if ($in_stock) {
                         ?>
-                        <input type="submit" class="add-to-cart-btn" value="Add To Cart">
+                            <input type="submit" class="add-to-cart-btn" value="Add To Cart">
                         <?php
                             } else {
                         ?>
                         <!-- Test disabled and style -->
-                        <input type="submit" value="Out of Stock" disabled>
+                            <input type="submit" value="Out of Stock" disabled>
                         <?php
                             }
                         ?>
-                    </div>
-                </form>
+                        </div>
+                    </form>
             </div>
         </div>
     </div>

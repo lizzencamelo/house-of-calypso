@@ -42,8 +42,9 @@
 </head>
 <body>
 
-    <div class="shop-header">
-        <a href="cart.php" class="shop-cart-button"><i class='bx bx-shopping-bag'></i></a>
+    <div class="shop-header">        
+        <span><a href="home.php">house of calypso</a></span>
+        <span><a href="cart.php" class="shop-cart-button"><i class='bx bx-shopping-bag'></i></a></span>
     </div>
 
     <div class="shop-landing">
@@ -77,7 +78,7 @@
                         <div class="product-title"><?= $product['name'] ?></div>
                         <div class="product-price">&#x20B9; <?= number_format($product['price']); ?></div>
                         <div class="button-container">
-                            <a href="shop_product.php?product_id=<?= $product['product_id'] ?>" class="">View</a>
+                            <a href="shop_product.php?product_id=<?= $product['product_id'] ?>" class="view-btn">View</a>
                         </div>
                     </div>
                 </div>

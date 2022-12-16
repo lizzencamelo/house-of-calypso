@@ -20,9 +20,11 @@ h3 {
 }
 
 .sub-heading {
+    font-family: 'Josefin Slab', serif;
     color:var(--text-header);
     font-size: 0.8rem;
-    font-weight: 100;
+    font-weight: 200;
+    max-width: 50vw;
 }
 
 @media (min-width: 768px) { 
@@ -36,7 +38,7 @@ h3 {
         font-size: 2rem;
     }
     .sub-heading {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -48,9 +50,10 @@ h3 {
     background-size: cover;
     background-position: bottom center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
+    padding: 0 8rem;
 }
 
 .landing-text {
@@ -84,16 +87,17 @@ h3 {
     letter-spacing: .1em;
     text-decoration: none;
     transition: opacity .3s;
-  }
+  } 
+
   .scroll-animate a:hover {
     opacity: .5;
   }
 
-#scroll a {
+ #scroll a {
     padding-top: 70px;
   }
 
-#scroll a span {
+ #scroll a span {
   position: absolute;
   top: 0;
   left: 50%;
@@ -179,9 +183,19 @@ h3 {
     overflow: hidden;
 }
 
+.category-details h3 {    
+    font-family: 'Gentium Book Basic', serif;
+    font-weight: 500;
+}
+
 .category-desc {
+    font-family: 'Quicksand', sans-serif;
     color: var(--text-normal);
     padding: 2rem 0;
+}
+
+.category-details .text {
+    font-family: 'La Belle Aurore', cursive;
 }
 
 .category-link:hover {
@@ -195,10 +209,6 @@ h3 {
 }
 
 /* Arrow */
-.animated-arrow {
-    text-transform: uppercase;
-}
-
 .the-arrow {
     width: 64px;
     transition: all 0.2s;

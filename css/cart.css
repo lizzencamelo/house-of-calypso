@@ -4,10 +4,20 @@ body {
     font-family: "Work Sans";
     overflow-x: hidden;
   }
+
+  
+  .shop-header {
+    justify-content: space-between;
+  }
+
   
   .your-cart,
   .checkout-box {
     padding: 4rem 1rem;
+  }
+
+  .your-cart h1, .order-summary h4{
+    font-family: 'La Belle Aurore', cursive;
   }
 
   .cart-menu, 
@@ -15,8 +25,17 @@ body {
     border-bottom: 1px solid black;
   }
 
+  .cart-menu h4, .cart-item h2 {
+    font-family: 'Mulish', sans-serif;
+  }
+
+  .cart-item {
+    font-family: 'Mulish', sans-serif;
+
+  }
+
   .your-cart .row {
-    margin: 2rem 4rem;
+    margin: 0.4rem 4rem;
   }
 
   .item-del-button i {

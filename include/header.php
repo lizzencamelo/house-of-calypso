@@ -20,7 +20,7 @@
             ?>
                 <li>                    
                     <span class="welcome-user">
-                        Hi, <?= $_SESSION["full_name"] ?>
+                        Hi, <a href="cart.php"><?= $_SESSION["full_name"] ?></a>
                     </span>
                     <a class="user-logout-button"  href="logout.php">
                         <i class='bx bx-log-out-circle'></i>

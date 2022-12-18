@@ -11,6 +11,20 @@ body {
   align-items: center;
 }
 
+.artisans-landing {
+  min-height: 25vh;
+}
+
+.shop-landing h1 {
+  font-family: 'Mulish', sans-serif;
+}
+
+.shop-landing span {
+  font-style: italic;
+  font-size: 3rem;
+  font-family: 'La Belle Aurore', cursive;
+}
+
 .shop-title a {
   color: #000;
   text-decoration: none;
@@ -30,10 +44,8 @@ body {
   text-decoration-style: dotted;
 }
 
-
-
 /*Product Card*/
-.content{
+.content {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
@@ -42,6 +54,10 @@ body {
 
 .image-container {
   height: 250px;
+}
+
+.artisans-space {
+  height: 350px;
 }
 
 .image-container img {

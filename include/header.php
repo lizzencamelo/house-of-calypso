@@ -5,7 +5,7 @@
         </a>
         <ul class="nav-list">
             <li><a  href="shop.php">Shop</a></li>
-            <li><a href="#">Philosophy</a></li>
+            <li><a href="artisans.php">Our Artisans</a></li>
             <li><a href="#">Contact</a></li>
             <?php 
                 if(!isset($_SESSION['user_id'])) {

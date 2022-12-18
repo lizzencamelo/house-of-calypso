@@ -1,0 +1,16 @@
+profession {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-family: 'Roboto Mono', monospace;
+}
+
+name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+}
+
+bio, productinfo {
+  font-size: 0.9rem;
+  font-family: 'Mulish', sans-serif;
+  font-family: 'Space Mono', monospace;
+}

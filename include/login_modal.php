@@ -14,13 +14,13 @@
                         
                                 <div class="input-block">
                                     <label for="email" class="input-label"> Email <br/>
-                                        <input type="email" name="email" id="email" placeholder="janedoe@email.com" >
+                                        <input type="email" name="email" id="user-email" placeholder="janedoe@email.com" >
                                     </label>
                                 </div>
 
                                 <div class="input-block">
                                     <label for="password" class="input-label"> Password <br/>
-                                        <input type="password" name="password" id="password" placeholder="******" >
+                                        <input type="password" name="password" id="user-password" placeholder="******" >
                                     </label>
                                 </div>
 

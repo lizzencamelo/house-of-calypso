@@ -26,13 +26,13 @@
 
                                 <div class="input-block">
                                     <label for="user-email" class="input-label"> Email <br/>
-                                        <input type="email" name="email" id="user-email" required >
+                                        <input type="email" name="email" id="email" required >
                                     </label>
                                 </div>
 
                                 <div class="input-block">
                                     <label for="user-password" class="input-label"> Password <br/>
-                                        <input type="password" name="password" id="user-password" minlength="6" required>
+                                        <input type="password" name="password" id="password" minlength="6" required>
                                     </label>
                                 </div>
 

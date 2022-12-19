@@ -3,16 +3,13 @@ window.addEventListener("load", function () {
     signup_form.addEventListener("submit", function (event) {
         var name = document.getElementById("full_name").value;
         console.log('signup');
-
-        var letters = /^[A-Za-z]+$/;
+        // Name validation
+        var letters = /^[A-Za-z ]+$/;
         if(name.match(letters))
          {
-           return true;
-         }
-        else
-         {
-         alert("Invalid name.");
-         return false;
+         } else {
+            alert("Invalid name.");
+            return false;
          }
 
         var XHR = new XMLHttpRequest();
@@ -35,8 +32,18 @@ window.addEventListener("load", function () {
 
     var login_form = document.getElementById("login-form");
     login_form.addEventListener("submit", function (event) {
+        var email = document.getElementById("user-email").value;
         var XHR = new XMLHttpRequest();
         var form_data = new FormData(login_form);
+
+        // Email Validation
+        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+        if (email.match(validRegex)) {
+        } else {
+            alert("Invalid email address!");
+            return false;
+        }
 
         // On success
         XHR.addEventListener("load", login_success);

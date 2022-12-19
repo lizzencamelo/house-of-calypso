@@ -8,7 +8,7 @@
                     </div>   
                     <div class="col-md-6  modal-right">
                         <div class="text-white mt-5">    
-                            <form id="signup-form" method="post" action="api/signup_submit.php">
+                            <form id="signup-form" method="post" action="">
                                 <h2 class="modal-title">Welcome!</h2>
                                 <p class="modal-desc">Please enter your details.</p>
                                 

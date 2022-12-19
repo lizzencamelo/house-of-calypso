@@ -1,7 +1,20 @@
 window.addEventListener("load", function () {
     var signup_form = document.getElementById("signup-form");
     signup_form.addEventListener("submit", function (event) {
+        var name = document.getElementById("full_name").value;
         console.log('signup');
+
+        var letters = /^[A-Za-z]+$/;
+        if(name.match(letters))
+         {
+           return true;
+         }
+        else
+         {
+         alert("Invalid name.");
+         return false;
+         }
+
         var XHR = new XMLHttpRequest();
         var form_data = new FormData(signup_form);
 

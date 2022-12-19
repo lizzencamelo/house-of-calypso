@@ -41,7 +41,7 @@
                         <div class="image-container artisans-space">
                             <img src="img/artisans/vikiweiland.jpg" alt="" />
                         </div> 
-                        <div class="content-container">
+                        <div class="content-container mt-4">
                             <artisan>
                                 <div class="artisan-name">
                                     <name>Viki Weiland</name>
@@ -64,9 +64,9 @@
                 <div class="col-md-4">
                     <div class="content">
                         <div class="image-container artisans-space">
-                            <img src="img/artisans/julietpolac.jpg" alt="" />
+                            <img src="img/artisans/polac.jfif" alt="" />
                         </div> 
-                        <div class="content-container">
+                        <div class="content-container mt-4">
                             <artisan>
                             <div class="artisan-name">
                                 <name>Juliette Polac</name>
@@ -90,7 +90,7 @@
                         <div class="image-container artisans-space">
                             <img src="img/artisans/nishimura.jpg" alt="" />
                         </div> 
-                        <div class="content-container">
+                        <div class="content-container mt-4">
                             <artisan>
                                 <div class="artisan-name">
                                     <name>Yohei Nishimura</name>

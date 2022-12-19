@@ -6,11 +6,11 @@ profession {
 
 name {
   font-family: 'Cormorant Garamond', serif;
+  font-family: 'La Belle Aurore', cursive;
   font-size: 2rem;
 }
 
 bio, productinfo {
   font-size: 0.9rem;
-  font-family: 'Mulish', sans-serif;
   font-family: 'Space Mono', monospace;
 }

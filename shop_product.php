@@ -45,40 +45,41 @@
             <?php
                 $product_images = glob("img/products/".$product['product_id']."/*");
             ?>
-            <div class="product-image" >
-                <img src="<?= $product_images[0] ?>" alt=""/>
-            </div>
-            <div class="product-description">
-                <div class="product-material"><?= $product['material'] ?></div>
-                <h1 class="product-title"><?= $product['name'] ?></h1>
-                <div class="product-details py-3"><?= $product['description'] ?></div>
-                <div class="product-colour py-3"><?= $product['colour'] ?></div>
-                <div class="product-dimensions pb-5"><?= $product['measurements'] ?></div>
-                <div class="row">
-                    <div class="product-price col-6 d-flex flex-column"><span class="tag">Price</span> &#x20B9; <?= number_format($product['price']); ?></div>
-                    <form action="api/cart_submit.php" method="post">
-                        <div class="col-6  d-flex flex-column">
-                            <span class="tag">Quantity</span>
-                            <input type="number" class="quantity" name="quantity" value="1" min="1" max="<?=$product['stock']?>" required>
-                        </div>
+            <div class="row main">
+                <div class="product-image col-md-5" >
+                    <img src="<?= $product_images[0] ?>" alt=""/>
                 </div>
-
-                        <input type="hidden" name="product_id" value="<?=$product['product_id']?>">
-                        <div class="add-to-cart">
-                        <?php
-                            if ($in_stock) {
-                        ?>
-                            <input type="submit" class="add-to-cart-btn" value="Add To Cart">
-                        <?php
-                            } else {
-                        ?>
-                        <!-- Test disabled and style -->
-                            <input type="submit" value="Out of Stock" disabled>
-                        <?php
-                            }
-                        ?>
-                        </div>
-                    </form>
+                <div class="product-description  col-md-6">
+                    <div class="product-material"><?= $product['material'] ?></div>
+                    <h1 class="product-title"><?= $product['name'] ?></h1>
+                    <div class="product-details py-3"><?= $product['description'] ?></div>
+                    <div class="product-colour py-3"><?= $product['colour'] ?></div>
+                    <div class="product-dimensions pb-5"><?= $product['measurements'] ?></div>
+                    <div class="row">
+                        <div class="product-price col-6 d-flex flex-column"><span class="tag">Price</span> &#x20B9; <?= number_format($product['price']); ?></div>
+                        <form action="api/cart_submit.php" method="post">
+                            <div class="col-6  d-flex flex-column">
+                                <span class="tag">Quantity</span>
+                                <input type="number" class="quantity" name="quantity" value="1" min="1" max="<?=$product['stock']?>" required>
+                            </div>
+                    </div>
+                            <input type="hidden" name="product_id" value="<?=$product['product_id']?>">
+                            <div class="add-to-cart">
+                            <?php
+                                if ($in_stock) {
+                            ?>
+                                <input type="submit" class="add-to-cart-btn" value="Add To Cart">
+                            <?php
+                                } else {
+                            ?>
+                            <!-- Test disabled and style -->
+                                <input type="submit" value="Out of Stock" disabled>
+                            <?php
+                                }
+                            ?>
+                            </div>
+                        </form>
+                </div>
             </div>
         </div>
     </div>

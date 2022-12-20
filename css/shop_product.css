@@ -21,6 +21,11 @@ body {
     align-content: flex-start;
     width: 100%;
     padding: 4rem;
+    min-height: 100vh;
+  }
+  
+  .main {
+    height: 75vh;
   }
 
   @media (max-width: 768px) {
@@ -56,8 +61,9 @@ font-family: 'Cormorant Garamond', serif;
     margin: 2rem;
   }
 
+
   .product-image {
-    height: 450px;
+    height: 100%;
   }
 
   .product-image img {

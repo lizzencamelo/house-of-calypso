@@ -22,7 +22,7 @@
 &nbsp;
 ```Visual Studio Code```
 
-UI
+## UI
 
 ### Home Page
 ![home](https://github.com/lizzencamelo/house-of-calypso/blob/master/product/home.png)

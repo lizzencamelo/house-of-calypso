@@ -33,6 +33,9 @@
 ### Login Modal   
 ![login_modal](https://github.com/lizzencamelo/house-of-calypso/blob/master/product/login_modal.png)
 
+### Our Artisans
+![artisans](https://github.com/lizzencamelo/house-of-calypso/blob/master/product/artisans.png)
+
 ### Cart   
 ![cart](https://github.com/lizzencamelo/house-of-calypso/blob/master/product/cart.png)
 
